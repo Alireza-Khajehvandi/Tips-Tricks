@@ -1,0 +1,4 @@
+for showing special module. try this:
+	with pip: pip freeze | grep <module-name>
+	with conda: conda list | grep <package-name>	
+	

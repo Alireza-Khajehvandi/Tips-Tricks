@@ -1,0 +1,25 @@
+ZSH instalation
+	1. Install Oh My Zsh on Ubuntu
+		$ sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+
+	2. Enable auto-suggestions on zsh
+		$ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+		Now, to activate the auto-suggestion plugin, open the zshrc file:
+			$ nano ~/.zshrc # use your editor instead of nano
+		zsh as default shell:
+			add exec zsh to .bashrc
+	
+	3. Enable syntax highlighting on Zsh
+		$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+		and then open zshrc and add `zsh-syntax-highlighting`
+		
+	4. Customise Zsh with Powerlevek10k theme
+		git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+	
+		change theme with `p10k configure` command
+		
+
+link: https://itsfoss.com/zsh-ubuntu/
+	
+

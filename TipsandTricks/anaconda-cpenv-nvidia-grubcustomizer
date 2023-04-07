@@ -1,0 +1,79 @@
+to create new env from old env, use these following cmds:
+	1. open terminal
+	2. write:
+	windows: conda activate <env-name>
+	linux: conda activate <env-name>
+	3. conda env export > env.yml
+	4. conda env create --name <new-env-name> --file env.yml
+	
+if did not work, try this:
+	1. open terminal
+	2. write:
+		windows: conda activate <env-name>
+		linux: conda activate <env-name>
+		
+	3. (Recommended)conda create --name <new-environment-name> --clone <environment-name>
+
+this shoud work correctly...!
+
+-------------------------------------------------------
+installing anaconda3
+
+before installing 
+	$ sudo apt update
+	$ sudo apt install curl -y
+
+installing:
+	$ cd /tmp
+	$ curl https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh --output anaconda.sh
+	$ sha256sum anaconda.sh
+	$ yes
+	
+links:
+tutorial:
+	https://www.digitalocean.com/community/tutorials/how-to-install-the-anaconda-python-distribution-on-ubuntu-22-04
+	https://linuxhint.com/install-anaconda-ubuntu-22-04/
+anaconda archive:
+	https://repo.anaconda.com/archive/  # "Anaconda3-2022.10-MacOSX-x86_64.pkg"
+
+----------------------------------------------------------
+installing nvidia driver
+
+	1. open terminal
+	2. Add the graphics drivers PPA by running the following command in the:
+		$ sudo add-apt-repository ppa:graphics-drivers/ppa
+	3. Update the package list by running the following command:
+		$ sudo apt update
+	4. You can find the version number by visiting the Nvidia website or by running the following command:
+		$ ubuntu-drivers devices
+	5. Install the Nvidia driver by running the following command:
+		sudo apt install nvidia-driver-<version>
+	6. Reboot your system to apply the changes.
+	7. After rebooting, you can check if the Nvidia driver is installed by running the following command in the terminal:
+		$ nvidia-smi
+
+	
+	from Chat-GPT with 'how to install nvidia driver on ubuntu' question:)
+-----------------------------------------------------------
+installing pytorch
+	linux: 
+		conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
+		conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia
+
+	links:
+		https://pytorch.org/get-started/locally/	
+		
+		
+		
+-------------------------------------------------------------
+installing grub-cusomizer
+	1. Add Grub Customizer PPA
+	Firstly, press Ctrl+Alt+T on keyboard to open terminal. When it opens, run the command below to add the PPA:
+		$ sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+	2. Add Grub Customizer PPA
+	After adding the PPA, you may run the apt command to install the tool in Ubuntu 22.04:
+		$ sudo apt update
+		$ sudo apt install grub-customizer
+	
+
+	
