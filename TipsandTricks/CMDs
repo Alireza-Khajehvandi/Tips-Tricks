@@ -2,3 +2,16 @@ for showing special module. try this:
 	with pip: pip freeze | grep <module-name>
 	with conda: conda list | grep <package-name>	
 	
+	
+you can use 'alias' for setting a custom command:
+
+	open your bash shell from your home directory in your text editor. 
+	(maybe you used .bashrc or .zshrc, etc)
+	$ code ~/.bashrc (my editor is vscode). you can use $ open ~/.bashrc.
+	
+	in the bottom of your bash commands add some alias that you want. like bellow:
+	alias who-are-you="echo My name is Alireza Khajehvandi...!, who are You...!?"
+	
+	Finally, close your terminal and open it again in other words reset your terminal and test your new command :)
+	
+	
